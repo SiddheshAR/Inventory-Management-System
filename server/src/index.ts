@@ -6,7 +6,7 @@ import helmet from "helmet";
 import morgan from "morgan";
 
 // Route Imports
-
+import dashboardRoutes from './routes/dashboadRoutes'
 
 
 // Configuration
@@ -22,6 +22,7 @@ app.use(cors());
 
 // ROUTES
 
+app.use("/dashboard",dashboardRoutes)
 
 // SERVER
 const port = process.env.PORT || 3000;
