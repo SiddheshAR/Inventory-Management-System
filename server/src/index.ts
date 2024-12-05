@@ -29,8 +29,8 @@ app.use("/products", productRoutes);
 app.use("/users",userRoutes)
 app.use('/expenses',expenseRoutes)
 // SERVER
-const port = process.env.PORT || 3000;
+const port = Number(process.env.PORT) || 3000;
 
-app.listen(port,()=>{
+app.listen(port,"0.0.0.0",()=>{
     console.log(`Server Running at ${port}`)
 })
